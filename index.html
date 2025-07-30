@@ -177,8 +177,14 @@
 
             return React.createElement('section', { id: "hero", className: "w-full min-h-screen flex flex-col items-center justify-center text-center px-4 pb-20" },
                 React.createElement('div', { id: "hero-content", className: `max-w-4xl transition-all duration-1000 ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}` },
-                    React.createElement('h1', { className: "font-philosopher text-golden-glow text-5xl sm:text-6xl md:text-7xl leading-tight font-bold [text-shadow:0_0_10px_#ffc371] mb-8 break-words" },
-                        "Sé el Origen de la Transformación."
+                    React.createElement('div', { className: "mb-8" },
+                        React.createElement('h1', { className: "font-philosopher text-golden-glow text-5xl sm:text-6xl md:text-7xl leading-tight font-bold [text-shadow:0_0_10px_#ffc371] break-words" },
+                            "Sé el Origen de la Transformación"
+                        ),
+                        React.createElement('div', { className: 'w-48 h-px bg-golden-glow/50 mx-auto my-6' }),
+                        React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl sm:text-5xl md:text-6xl leading-tight font-bold [text-shadow:0_0_10px_#ffc371] break-words" },
+                            "Únete a Trascendit"
+                        )
                     ),
                     React.createElement('p', { className: "text-lg sm:text-xl text-off-white-text/80 max-w-3xl mx-auto mb-8" },
                         "Buscamos a 20 pioneros para co-crear 'El Círculo de Crecimiento'. Tu voz y tu experiencia darán forma a nuestra comunidad desde su nacimiento."
@@ -282,7 +288,7 @@
                         "Este no es un simple formulario. Es nuestra forma de asegurar que reunimos a un grupo de personas verdaderamente alineadas y comprometidas. Las plazas son limitadas a 20 fundadores para garantizar una experiencia íntima y poderosa. Por favor, responde con el corazón."
                     ),
                     React.createElement('a', { 
-                        href: "https://tally.so/r/mZr15z", // <-- ¡IMPORTANTE! REEMPLAZA ESTO CON EL ENLACE A TU FORMULARIO
+                        href: "https://tally.so/r/w5Q0PQ", // <-- ¡IMPORTANTE! REEMPLAZA ESTO CON EL ENLACE A TU FORMULARIO
                         target: "_blank", 
                         rel: "noopener noreferrer", 
                         className: "mt-4 inline-block bg-golden-glow text-deep-black-bg font-bold px-12 py-4 rounded-full text-xl no-underline transition-all duration-300 shadow-lg shadow-golden-glow/20 hover:scale-105 hover:bg-golden-glow/90 animate-pulse-glow" 
