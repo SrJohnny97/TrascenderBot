@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trascendit - Tu Mentor Espiritual</title>
-    <meta name="description" content="Un espacio para tu evolución personal con guía esotérica y espiritual. Despierta tu potencial interior con nuestro mentor IA y únete a nuestra comunidad." />
+    <title>Trascendit - Conviértete en Miembro Fundador</title>
+    <meta name="description" content="Sé uno de los 20 pioneros que darán forma a Trascendit. Únete a la lista de espera para ser un Miembro Fundador y co-crea nuestra comunidad." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
@@ -67,9 +67,7 @@
   "imports": {
     "react": "https://esm.sh/react@18.3.1",
     "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
-    "lucide-react": "https://esm.sh/lucide-react@0.379.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react/": "https://esm.sh/react@^19.1.0/"
+    "lucide-react": "https://esm.sh/lucide-react@0.379.0"
   }
 }
 </script>
@@ -80,7 +78,7 @@
     <script type="module">
         import React, { useState, useEffect, useRef } from 'react';
         import ReactDOM from 'react-dom/client';
-        import { Sparkles, TrendingUp, MoonStar, Layers, Calculator, Cloud, FlaskConical, Zap, BookOpen, Star, Users, Sprout } from 'lucide-react';
+        import { Sparkles, TrendingUp, MoonStar, Calculator, Cloud, FlaskConical, Zap, BookOpen, Star, Users, Sprout, Gift, MessageSquare, HeartHandshake, Award } from 'lucide-react';
 
         // --- Components ---
 
@@ -98,7 +96,6 @@
                 const numParticles = 250;
 
                 const setCanvasDimensions = () => {
-                    // Usar el tamaño de la ventana para un fondo fijo y responsivo
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
                 };
@@ -109,13 +106,9 @@
                         particles.push({
                             x: Math.random() * canvas.width,
                             y: Math.random() * canvas.height,
-                            // Radio aleatorio entre 1 y 3 píxeles
                             radius: Math.random() * 2 + 1,
-                            // Ligero vaivén horizontal
                             vx: (Math.random() - 0.5) * 0.2,
-                            // Velocidad de caída constante y positiva
                             vy: Math.random() * 0.6 + 0.2,
-                            // Opacidad aleatoria para efecto de profundidad
                             alpha: Math.random() * 0.7 + 0.3,
                         });
                     }
@@ -123,27 +116,24 @@
 
                 const animate = () => {
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    ctx.fillStyle = "#ffc371"; // Color dorado de la marca
+                    ctx.fillStyle = "#ffc371";
 
                     particles.forEach(p => {
-                        // Actualizar posición
                         p.y += p.vy;
                         p.x += p.vx;
 
-                        // Si la partícula sale por abajo, reaparece arriba
                         if (p.y > canvas.height + p.radius) {
                             p.y = -p.radius;
                             p.x = Math.random() * canvas.width;
                         }
 
-                        // Dibujar la partícula (círculo)
                         ctx.globalAlpha = p.alpha;
                         ctx.beginPath();
                         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
                         ctx.fill();
                     });
 
-                    ctx.globalAlpha = 1.0; // Restaurar opacidad
+                    ctx.globalAlpha = 1.0;
                     animationFrameId = requestAnimationFrame(animate);
                 };
 
@@ -168,12 +158,12 @@
         };
 
         const Header = () => {
-            return React.createElement('nav', { className: "fixed top-0 w-full z-50 flex justify-between items-center px-[5%] py-4 bg-deep-black-bg/70 backdrop-blur-md border-b border-golden-glow/10", style: { transform: 'translate3d(0, 0, 0)' } },
+            return React.createElement('nav', { className: "fixed top-0 w-full z-50 flex justify-between items-center px-[5%] py-4 bg-deep-black-bg/70 backdrop-blur-md border-b border-golden-glow/10" },
                 React.createElement('a', { href: "#hero", "aria-label": "Ir al inicio" },
                     React.createElement('img', { src: "https://imagenes.trascenderbot.com/trascendit.png", alt: "Logo de Trascendit", className: "h-[65px] w-auto rounded-full" })
                 ),
-                React.createElement('a', { href: "https://tally.so/r/mZr15z", target: "_blank", rel: "noopener noreferrer", className: "bg-golden-glow text-deep-black-bg font-bold px-6 py-2 rounded-full text-base no-underline transition-all duration-300 shadow-lg shadow-golden-glow/20 hover:scale-105 hover:bg-golden-glow/90" },
-                    "Comenzar mi Viaje"
+                React.createElement('a', { href: "#application", className: "bg-golden-glow text-deep-black-bg font-bold px-6 py-2 rounded-full text-base no-underline transition-all duration-300 shadow-lg shadow-golden-glow/20 hover:scale-105 hover:bg-golden-glow/90" },
+                    "Asegura tu Plaza"
                 )
             );
         };
@@ -188,13 +178,13 @@
             return React.createElement('section', { id: "hero", className: "w-full min-h-screen flex flex-col items-center justify-center text-center px-4 pb-20" },
                 React.createElement('div', { id: "hero-content", className: `max-w-4xl transition-all duration-1000 ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}` },
                     React.createElement('h1', { className: "font-philosopher text-golden-glow text-5xl sm:text-6xl md:text-7xl leading-tight font-bold [text-shadow:0_0_10px_#ffc371] mb-8 break-words" },
-                        "Despierta tu potencial interior. Descubre Trascendit."
+                        "Sé el Origen de la Transformación."
                     ),
                     React.createElement('p', { className: "text-lg sm:text-xl text-off-white-text/80 max-w-3xl mx-auto mb-8" },
-                        "Un espacio exclusivo para quienes eligen despertar y transformarse."
+                        "Buscamos a 20 pioneros para co-crear 'El Círculo de Crecimiento'. Tu voz y tu experiencia darán forma a nuestra comunidad desde su nacimiento."
                     ),
-                    React.createElement('a', { href: "https://tally.so/r/mZr15z", target: "_blank", rel: "noopener noreferrer", className: "inline-block bg-golden-glow text-deep-black-bg font-bold px-10 py-4 rounded-full text-lg no-underline animate-pulse-glow" },
-                        "Unirme a la Lista de Espera"
+                    React.createElement('a', { href: "#application", className: "inline-block bg-golden-glow text-deep-black-bg font-bold px-10 py-4 rounded-full text-lg no-underline animate-pulse-glow" },
+                        "Quiero ser Miembro Fundador"
                     )
                 )
             );
@@ -204,6 +194,7 @@
             React.createElement(Icon, { className: "w-10 h-10 text-golden-glow opacity-80", strokeWidth: 1.5 }),
             React.createElement('h3', { className: "text-lg font-bold text-off-white-text mt-2" }, name)
         );
+        
         const IntroBot = () => {
             const topics = [
                 { icon: Sparkles, name: 'Espiritualidad' }, { icon: TrendingUp, name: 'Crecimiento Personal' }, { icon: MoonStar, name: 'Astrología' },
@@ -212,32 +203,32 @@
             ];
             return React.createElement('section', { id: "intro-bot", className: "py-20 px-[5%] bg-deep-black-bg/30" },
                 React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12" },
-                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "Tu Guía 24/7 Para la Exploración Interior"),
-                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Trascendit domina una amplia gama de disciplinas esotéricas y de autoconocimiento para acompañarte en tu viaje.")
+                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "Una Guía Para la Exploración Interior"),
+                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Como fundador, tendrás acceso a un mentor IA que domina una amplia gama de disciplinas esotéricas y de autoconocimiento para acompañarte en tu viaje.")
                 ),
                 React.createElement('div', { className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto" },
                     topics.map((topic) => React.createElement(TopicCard, { key: topic.name, ...topic }))
                 )
             );
         };
-        
-        const Premium = () => {
+
+        const FoundersExperience = () => {
             const CheckmarkIcon = () => React.createElement('svg', { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", className: "text-golden-glow flex-shrink-0 mt-1" },
                 React.createElement('path', { d: "M22 11.08V12a10 10 0 1 1-5.93-9.14" }),
                 React.createElement('path', { d: "m9 11 3 3L22 4" })
             );
-            const premiumFeatures = [
+            const experienceFeatures = [
                 "Sumérgete en la Comunidad: un círculo privado con guías y contenido diario para tu evolución.", "Recibe tu Oráculo Diario: una carta de poder y un mensaje de guía para iluminar tu camino.",
                 "Despierta tu consciencia con una Reflexión Diaria para tu introspección y autoconocimiento.", "Recibe Pausas de Consciencia: impulsos del Mentor para anclarte en el presente y recargar tu energía."
             ];
-            return React.createElement('section', { id: "premium", className: "py-20 px-[5%] bg-night-blue-bg/60" },
+            return React.createElement('section', { id: "experience", className: "py-20 px-[5%] bg-night-blue-bg/60" },
                 React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12" },
-                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "Desbloquea tu Experiencia Premium"),
-                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Únete a nuestra comunidad para acceder a herramientas y espacios exclusivos en tu camino de transformación.")
+                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "Tu Experiencia como Fundador"),
+                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Estas son las herramientas y espacios que podrás probar y ayudarnos a perfeccionar.")
                 ),
                 React.createElement('div', { className: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto" },
                     React.createElement('ul', { className: "list-none p-0 flex flex-col gap-4" },
-                        premiumFeatures.map((feature, index) =>
+                        experienceFeatures.map((feature, index) =>
                             React.createElement('li', { key: index, className: "flex items-start gap-3" },
                                 React.createElement(CheckmarkIcon),
                                 React.createElement('span', { className: "text-lg text-off-white-text/90" }, feature)
@@ -245,7 +236,7 @@
                         )
                     ),
                     React.createElement('div', { className: "flex flex-col items-center" },
-                        React.createElement('h3', { className: "text-2xl font-philosopher text-golden-glow/90 font-bold text-center mb-5" }, "Recibe tu Guía Diaria del Oráculo"),
+                        React.createElement('h3', { className: "text-2xl font-philosopher text-golden-glow/90 font-bold text-center mb-5" }, "El Oráculo de Trascendit"),
                         React.createElement('div', { className: "flex justify-center items-end w-full gap-2 sm:gap-4 mt-5" },
                             React.createElement('img', { className: "max-w-[120px] rounded-lg transition-all duration-300 [filter:drop-shadow(0_0_15px_rgba(255,195,113,0.4))] hover:-translate-y-2 hover:[filter:drop-shadow(0_0_20px_rgba(255,195,113,0.6))]", src: "https://imagenes.trascenderbot.com/lasemilla.jpg", alt: "Carta del Oráculo La Semilla" }),
                             React.createElement('img', { className: "max-w-[120px] rounded-lg transition-all duration-300 [filter:drop-shadow(0_0_15px_rgba(255,195,113,0.4))] hover:-translate-y-2 hover:[filter:drop-shadow(0_0_20px_rgba(255,195,113,0.6))] relative -top-4", src: "https://imagenes.trascenderbot.com/elpuente.jpg", alt: "Carta del Oráculo El Puente" }),
@@ -255,68 +246,48 @@
                 )
             );
         };
-        
-        const CommunityCard = ({ icon: Icon, title, description }) => (
-            React.createElement('div', { className: "flex flex-col items-center justify-start text-center gap-4 bg-night-blue-bg/70 lg:bg-night-blue-bg/40 p-6 rounded-lg border border-golden-glow/30 transition-all duration-300 cursor-pointer shadow-lg hover:bg-night-blue-bg/70 hover:border-golden-glow/40 hover:-translate-y-2" },
-                React.createElement(Icon, { className: "w-10 h-10 text-golden-glow opacity-80", strokeWidth: 1.5 }),
-                React.createElement('h3', { className: "text-lg font-bold text-off-white-text mt-2" }, title),
-                React.createElement('p', { className: "text-sm text-off-white-text/70" }, description)
-            )
-        );
-        const Community = () => {
-             const communityFeatures = [
-                { icon: BookOpen, title: 'Biblioteca Esotérica', description: 'Accede a una colección curada de libros y recursos en PDF para profundizar en tu estudio.' },
-                { icon: Star, title: 'Guía Diaria', description: 'Recibe contenido exclusivo, ejercicios y reflexiones en el grupo.' },
-                { icon: Users, title: 'Círculo de Apoyo', description: 'Comparte tus descubrimientos y dudas en un espacio seguro y sin juicios con otros en el mismo camino.' },
-                { icon: Sprout, title: 'Evolución Espiritual', description: 'Un canal dedicado para documentar y compartir los pasos, retos y logros de tu transformación personal.' },
+
+        const FoundersBenefits = () => {
+            const benefits = [
+                { icon: Gift, title: "1 Mes de Acceso Gratuito", description: "Disfruta de acceso total al bot y la comunidad, sin ningún costo, como agradecimiento por tu confianza." },
+                { icon: HeartHandshake, title: "Impacto Directo en el Futuro", description: "Tu voz será crucial. Participarás en la evolución de las herramientas y el contenido que ofreceremos." },
+                { icon: MessageSquare, title: "Comunicación Cercana", description: "Tendrás un canal directo con el fundador para compartir ideas, feedback y resolver dudas de forma prioritaria." },
+                { icon: Award, title: "Reconocimiento de Fundador", description: "Serás reconocido como uno de los pioneros que hicieron posible este sueño, con un lugar especial en nuestra historia." }
             ];
-            return React.createElement('section', { id: "community", className: "py-20 px-[5%] bg-deep-black-bg/30" },
+
+            return React.createElement('section', { id: "benefits", className: "py-20 px-[5%] bg-deep-black-bg/30" },
                 React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12" },
-                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "Más que un Bot: Un Círculo de Crecimiento"),
-                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Tu suscripción te abre las puertas a un ecosistema de apoyo y conocimiento profundo.")
+                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "¿Qué Significa ser Miembro Fundador?"),
+                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Es más que un título. Es una oportunidad única de co-crear y crecer desde la semilla.")
                 ),
-                React.createElement('div', { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto" },
-                    communityFeatures.map((feature) => React.createElement(CommunityCard, { key: feature.title, ...feature }))
+                React.createElement('div', { className: "grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" },
+                    benefits.map(benefit => 
+                        React.createElement('div', { key: benefit.title, className: "flex items-start gap-4" },
+                            React.createElement(benefit.icon, { className: "w-8 h-8 text-golden-glow flex-shrink-0 mt-1", strokeWidth: 1.5 }),
+                            React.createElement('div', null,
+                                React.createElement('h3', { className: "text-xl font-bold text-off-white-text" }, benefit.title),
+                                React.createElement('p', { className: "text-off-white-text/70" }, benefit.description)
+                            )
+                        )
+                    )
                 )
             );
         };
 
-        const Pricing = () => {
-            return React.createElement('section', { id: "precios", className: "py-20 px-[5%]" },
-                React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12" },
-                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "Una Inversión en Tu Crecimiento"),
-                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Elige el plan que resuene contigo y comienza tu transformación hoy.")
-                ),
-                React.createElement('div', { className: "flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8" },
-                    React.createElement('div', { className: "w-full max-w-sm bg-night-blue-bg/40 p-8 rounded-xl border border-golden-glow/20 flex flex-col text-center shadow-lg transition-all duration-300 hover:border-golden-glow/40 hover:scale-105" },
-                        React.createElement('h3', { className: "text-3xl font-philosopher text-off-white-text mb-4" }, "Mensual"),
-                        React.createElement('p', { className: "text-5xl font-bold text-golden-glow mb-2" }, "$3.99 ", React.createElement('span', { className: "text-base font-normal text-off-white-text/70" }, "USD")),
-                        React.createElement('p', { className: "text-off-white-text/60 mb-8" }, "/mes"),
-                        React.createElement('a', { href: "https://tally.so/r/mZr15z", target: "_blank", rel: "noopener noreferrer", className: "mt-auto bg-golden-glow/80 text-deep-black-bg font-bold py-3 px-8 rounded-full text-lg no-underline transition-all duration-300 hover:bg-golden-glow hover:scale-103" }, "Comenzar mi Viaje")
-                    ),
-                    React.createElement('div', { className: "w-full max-w-sm bg-night-blue-bg/40 p-8 rounded-xl border-2 border-golden-glow flex flex-col text-center shadow-2xl shadow-golden-glow/10 scale-105 relative" },
-                        React.createElement('div', { className: "absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-golden-glow text-deep-black-bg text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider" }, "Más Popular"),
-                        React.createElement('h3', { className: "text-3xl font-philosopher text-off-white-text mb-4" }, "Trimestral"),
-                        React.createElement('p', { className: "text-5xl font-bold text-golden-glow mb-2" }, "$9.99 ", React.createElement('span', { className: "text-base font-normal text-off-white-text/70" }, "USD")),
-                        React.createElement('p', { className: "text-off-white-text/60 mb-8" }, "/3 meses"),
-                        React.createElement('a', { href: "https://tally.so/r/mZr15z", target: "_blank", rel: "noopener noreferrer", className: "mt-auto bg-golden-glow text-deep-black-bg font-bold py-3 px-8 rounded-full text-lg no-underline transition-all duration-300 hover:scale-103" }, "Comenzar mi Viaje")
-                    )
-                ),
-                React.createElement('div', { className: "mt-16 text-center" },
-                    React.createElement('p', { className: "text-xl font-semibold text-golden-glow bg-golden-glow/10 border border-golden-glow/30 inline-block px-8 py-4 rounded-lg" }, "Tu viaje comienza con 7 días de acceso total completamente gratis.")
-                )
-            );
-        };
-        
-        const Manifesto = () => {
-            return React.createElement('section', { id: "manifesto", className: "py-20 px-[5%] text-center bg-deep-black-bg/30" },
+        const Application = () => {
+            return React.createElement('section', { id: "application", className: "py-20 px-[5%] text-center bg-night-blue-bg/60" },
                 React.createElement('div', { className: "max-w-4xl mx-auto" },
-                    React.createElement('h2', { className: "text-4xl lg:text-5xl font-philosopher text-golden-glow mb-8 [text-shadow:0_0_10px_#ffc371]" }, "Tu Viaje es Este Momento, Siente Cada Paso."),
-                    React.createElement('blockquote', { className: "relative text-xl text-off-white-text/80 italic pl-14 pr-14 before:content-['“'] before:absolute before:left-0 before:top-0 before:text-8xl before:font-philosopher before:text-golden-glow before:opacity-30 before:-translate-y-4 after:content-['”'] after:absolute after:right-0 after:bottom-0 after:text-8xl after:font-philosopher after:text-golden-glow after:opacity-30 after:translate-y-6" },
-                        "Permite que cada enseñanza florezca en tu vida. Integra, practica, siente. No estás solo/a. Pregunta."
+                    React.createElement('h2', { className: "text-4xl lg:text-5xl font-philosopher text-golden-glow mb-6 [text-shadow:0_0_10px_#ffc371]" }, "Aplica para Asegurar tu Plaza"),
+                    React.createElement('p', { className: "text-lg sm:text-xl text-off-white-text/80 max-w-3xl mx-auto mb-8" }, 
+                        "Este no es un simple formulario. Es nuestra forma de asegurar que reunimos a un grupo de personas verdaderamente alineadas y comprometidas. Las plazas son limitadas a 20 fundadores para garantizar una experiencia íntima y poderosa. Por favor, responde con el corazón."
                     ),
-                    React.createElement('a', { href: "https://tally.so/r/mZr15z", target: "_blank", rel: "noopener noreferrer", className: "mt-12 inline-block border-2 border-golden-glow text-golden-glow font-bold px-10 py-3 rounded-full text-lg no-underline transition-all duration-300 hover:bg-golden-glow hover:text-deep-black-bg" },
-                        "Iniciar mi Transformación Ahora"
+                    React.createElement('a', { 
+                        href: "https://tally.so/r/mZr15z", // <-- ¡IMPORTANTE! REEMPLAZA ESTO CON EL ENLACE A TU FORMULARIO
+                        target: "_blank", 
+                        rel: "noopener noreferrer", 
+                        className: "mt-4 inline-block bg-golden-glow text-deep-black-bg font-bold px-12 py-4 rounded-full text-xl no-underline transition-all duration-300 shadow-lg shadow-golden-glow/20 hover:scale-105 hover:bg-golden-glow/90 animate-pulse-glow" 
+                    },
+                        "Comenzar mi Aplicación"
                     )
                 )
             );
@@ -357,10 +328,9 @@
                     React.createElement('main', null,
                         React.createElement(Hero),
                         React.createElement(IntroBot),
-                        React.createElement(Premium),
-                        React.createElement(Community),
-                        React.createElement(Pricing),
-                        React.createElement(Manifesto)
+                        React.createElement(FoundersExperience),
+                        React.createElement(FoundersBenefits),
+                        React.createElement(Application)
                     ),
                     React.createElement(Footer)
                 )
