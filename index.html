@@ -4,8 +4,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trascendit - Conviértete en Miembro Fundador</title>
-    <meta name="description" content="Sé uno de los 20 pioneros que darán forma a Trascendit. Únete a la lista de espera para ser un Miembro Fundador y co-crea nuestra comunidad." />
+    
+    <!-- SEO Meta Tags -->
+    <title>Trascendit: Acceso Exclusivo para Miembros Fundadores</title>
+    <meta name="description" content="¿Sientes un llamado a evolucionar? Buscamos a 20 pioneros para co-crear Trascendit. Conviértete en Miembro Fundador y obtén acceso exclusivo a nuestra IA, comunidad y beneficios de por vida. Plazas limitadas. ¡Aplica hoy!" />
+    <meta name="keywords" content="trascendit, crecimiento personal, espiritualidad, autoconocimiento, meditación, astrología, numerología, tarot, comunidad, despertar espiritual, IA espiritual" />
+    <meta name="author" content="Trascendit" />
+    <link rel="canonical" href="https://trascendit.com" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trascendit.com" />
+    <meta property="og:title" content="Trascendit: Acceso Exclusivo para Miembros Fundadores" />
+    <meta property="og:description" content="Buscamos a 20 pioneros para co-crear una comunidad de crecimiento espiritual. Conviértete en Miembro Fundador y obtén beneficios únicos." />
+    <meta property="og:image" content="https://imagenes.trascenderbot.com/trascendit_og_image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://trascendit.com" />
+    <meta property="twitter:title" content="Trascendit: Acceso Exclusivo para Miembros Fundadores" />
+    <meta property="twitter:description" content="Buscamos a 20 pioneros para co-crear una comunidad de crecimiento espiritual. Conviértete en Miembro Fundador y obtén beneficios únicos." />
+    <meta property="twitter:image" content="https://imagenes.trascenderbot.com/trascendit_og_image.jpg" />
+
+    <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
@@ -26,22 +47,22 @@
                     lato: ['Lato', 'sans-serif'],
                 },
                 animation: {
-                    'fade-in': 'fadeIn 1s ease-in-out forwards',
+                    'fade-in-up': 'fadeInUp 1s ease-in-out forwards',
                     'pulse-glow': 'pulseGlow 2.5s infinite ease-in-out',
                 },
                 keyframes: {
-                    fadeIn: {
-                        '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    fadeInUp: {
+                        '0%': { opacity: '0', transform: 'translateY(30px)' },
                         '100%': { opacity: '1', transform: 'translateY(0)' },
                     },
                     pulseGlow: {
                         '0%, 100%': { 
                             transform: 'scale(1)',
-                            boxShadow: '0 0 15px rgba(255, 195, 113, 0.3)',
+                            boxShadow: '0 0 20px rgba(255, 195, 113, 0.4)',
                         },
                         '50%': { 
                             transform: 'scale(1.05)',
-                            boxShadow: '0 0 35px rgba(255, 195, 113, 0.7)',
+                            boxShadow: '0 0 40px rgba(255, 195, 113, 0.8)',
                         },
                     },
                 },
@@ -54,12 +75,8 @@
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background-color: #0d0617;
-        }
-        body, #root {
-          width: 100%;
-          max-width: 100vw;
-          overflow-x: hidden;
+            background-color: #0d0617; /* Fallback color */
+            overflow-x: hidden;
         }
     </style>
 <script type="importmap">
@@ -78,10 +95,9 @@
     <script type="module">
         import React, { useState, useEffect, useRef } from 'react';
         import ReactDOM from 'react-dom/client';
-        import { Sparkles, TrendingUp, MoonStar, Calculator, Cloud, FlaskConical, Zap, BookOpen, Star, Users, Sprout, Gift, MessageSquare, HeartHandshake, Award } from 'lucide-react';
+        import { Sparkles, TrendingUp, MoonStar, Calculator, Cloud, FlaskConical, Zap, BookOpen, Star, Users, Sprout, Gift, MessageSquare, HeartHandshake, Award, Library, Sun, CircleDot, ShieldCheck } from 'lucide-react';
 
-        // --- Components ---
-
+        // --- START: 1:1 COPY FROM paginarespaldo.html ---
         const AnimatedBackground = () => {
             const canvasRef = useRef(null);
 
@@ -156,14 +172,15 @@
 
             return React.createElement('canvas', { ref: canvasRef, id: "animated-bg", className: "fixed top-0 left-0 w-full h-full z-0", "aria-hidden": "true", style: { transform: 'translate3d(0, 0, 0)' } });
         };
+        // --- END: 1:1 COPY FROM paginarespaldo.html ---
 
         const Header = () => {
-            return React.createElement('nav', { className: "fixed top-0 w-full z-50 flex justify-between items-center px-[5%] py-4 bg-deep-black-bg/70 backdrop-blur-md border-b border-golden-glow/10" },
-                React.createElement('a', { href: "#hero", "aria-label": "Ir al inicio" },
+            return React.createElement('header', { className: "fixed top-0 w-full z-50 flex justify-between items-center px-[5%] py-4 bg-deep-black-bg/70 backdrop-blur-md border-b border-golden-glow/10" },
+                React.createElement('a', { href: "#hero", 'aria-label': "Ir al inicio" },
                     React.createElement('img', { src: "https://imagenes.trascenderbot.com/trascendit.png", alt: "Logo de Trascendit", className: "h-[65px] w-auto rounded-full" })
                 ),
-                React.createElement('a', { href: "#application", className: "bg-golden-glow text-deep-black-bg font-bold px-6 py-2 rounded-full text-base no-underline transition-all duration-300 shadow-lg shadow-golden-glow/20 hover:scale-105 hover:bg-golden-glow/90" },
-                    "Asegura tu Plaza"
+                React.createElement('a', { href: "#application", className: "bg-golden-glow text-deep-black-bg font-bold px-6 py-2 rounded-full text-base no-underline transition-all duration-300 shadow-lg shadow-golden-glow/20 hover:scale-105 hover:bg-white" },
+                    "Aplica Ahora"
                 )
             );
         };
@@ -177,21 +194,19 @@
 
             return React.createElement('section', { id: "hero", className: "w-full min-h-screen flex flex-col items-center justify-center text-center px-4 pt-28 pb-20" },
                 React.createElement('div', { id: "hero-content", className: `max-w-4xl transition-all duration-1000 ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}` },
-                    React.createElement('div', { className: "mb-8" },
-                        React.createElement('h1', { className: "font-philosopher text-golden-glow text-5xl sm:text-6xl md:text-7xl leading-tight font-bold [text-shadow:0_0_10px_#ffc371] break-words" },
-                            "Sé el Origen de la Transformación"
-                        ),
-                        React.createElement('div', { className: 'w-48 h-px bg-golden-glow/50 mx-auto my-6' }),
-                        React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl sm:text-5xl md:text-6xl leading-tight font-bold [text-shadow:0_0_10px_#ffc371] break-words" },
-                            "Únete a Trascendit"
-                        )
+                    React.createElement('h1', { className: "font-philosopher text-golden-glow text-5xl sm:text-6xl md:text-7xl leading-tight font-bold [text-shadow:0_0_20px_#ffc371] break-words" },
+                        "¿Sientes que hay algo más grande para ti?"
                     ),
-                    React.createElement('p', { className: "text-lg sm:text-xl text-off-white-text/80 max-w-3xl mx-auto mb-8" },
-                        "Buscamos a 20 pioneros para co-crear 'El Círculo de Crecimiento'. Tu voz y tu experiencia darán forma a nuestra comunidad desde su nacimiento."
+                    React.createElement('p', { className: "text-xl sm:text-2xl text-off-white-text/80 max-w-3xl mx-auto my-8" },
+                        "Has despertado. Sientes la llamada a evolucionar, pero el camino parece solitario y confuso. No estás solo. Trascendit nace para ser tu brújula."
                     ),
-                    React.createElement('a', { href: "#application", className: "inline-block bg-golden-glow text-deep-black-bg font-bold px-10 py-4 rounded-full text-lg no-underline animate-pulse-glow" },
-                        "Quiero ser Miembro Fundador"
-                    )
+                    React.createElement('h2', { className: "font-philosopher text-white text-3xl sm:text-4xl md:text-5xl leading-tight font-bold mb-8" },
+                        "Buscamos a 20 Pioneros para Forjar el Futuro."
+                    ),
+                    React.createElement('a', { href: "#application", className: "inline-block bg-golden-glow text-deep-black-bg font-bold px-12 py-4 rounded-full text-xl no-underline animate-pulse-glow" },
+                        "Quiero Ser Fundador"
+                    ),
+                    React.createElement('p', { className: "mt-6 text-off-white-text/60" }, "Las aplicaciones son gratuitas y sin compromiso.")
                 )
             );
         };
@@ -201,19 +216,19 @@
             React.createElement('h3', { className: "text-lg font-bold text-off-white-text mt-2" }, name)
         );
         
-        const IntroBot = () => {
+        const AiMentor = () => {
             const topics = [
                 { icon: Sparkles, name: 'Espiritualidad' }, { icon: TrendingUp, name: 'Crecimiento Personal' }, { icon: MoonStar, name: 'Astrología' },
                 { icon: Star, name: 'Manifestación' }, { icon: Calculator, name: 'Numerología' }, { icon: Cloud, name: 'Sueños y Símbolos' },
                 { icon: FlaskConical, name: 'Alquimia Interior' }, { icon: Zap, name: 'Chakras y Energía' },
             ];
-            return React.createElement('section', { id: "intro-bot", className: "py-20 px-[5%] bg-deep-black-bg/30" },
-                React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12" },
+            return React.createElement('section', { id: "ai-mentor", className: "py-20 px-[5%] bg-transparent" },
+                React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12 animate-fade-in-up" },
                     React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "Una Guía Para la Exploración Interior"),
-                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Como fundador, tendrás acceso a un mentor IA que domina una amplia gama de disciplinas esotéricas y de autoconocimiento para acompañarte en tu viaje.")
+                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Como fundador, tendrás acceso prioritario a un mentor IA que domina una amplia gama de disciplinas esotéricas y de autoconocimiento para acompañarte en tu viaje.")
                 ),
                 React.createElement('div', { className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto" },
-                    topics.map((topic) => React.createElement(TopicCard, { key: topic.name, ...topic }))
+                    topics.map((topic, index) => React.createElement(TopicCard, { key: topic.name, ...topic, style: { animationDelay: `${index * 100}ms` } }))
                 )
             );
         };
@@ -227,12 +242,12 @@
                 "Sumérgete en la Comunidad: un círculo privado con guías y contenido diario para tu evolución.", "Recibe tu Oráculo Diario: una carta de poder y un mensaje de guía para iluminar tu camino.",
                 "Despierta tu consciencia con una Reflexión Diaria para tu introspección y autoconocimiento.", "Recibe Pausas de Consciencia: impulsos del Mentor para anclarte en el presente y recargar tu energía."
             ];
-            return React.createElement('section', { id: "experience", className: "py-20 px-[5%] bg-night-blue-bg/60" },
-                React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12" },
+            return React.createElement('section', { id: "experience", className: "py-20 px-[5%] bg-black/20" },
+                React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12 animate-fade-in-up" },
                     React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "Tu Experiencia como Fundador"),
                     React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Estas son las herramientas y espacios que podrás probar y ayudarnos a perfeccionar.")
                 ),
-                React.createElement('div', { className: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto" },
+                React.createElement('div', { className: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto" },
                     React.createElement('ul', { className: "list-none p-0 flex flex-col gap-4" },
                         experienceFeatures.map((feature, index) =>
                             React.createElement('li', { key: index, className: "flex items-start gap-3" },
@@ -244,9 +259,33 @@
                     React.createElement('div', { className: "flex flex-col items-center" },
                         React.createElement('h3', { className: "text-2xl font-philosopher text-golden-glow/90 font-bold text-center mb-5" }, "El Oráculo de Trascendit"),
                         React.createElement('div', { className: "flex justify-center items-end w-full gap-2 sm:gap-4 mt-5" },
-                            React.createElement('img', { className: "max-w-[120px] rounded-lg transition-all duration-300 [filter:drop-shadow(0_0_15px_rgba(255,195,113,0.4))] hover:-translate-y-2 hover:[filter:drop-shadow(0_0_20px_rgba(255,195,113,0.6))]", src: "https://imagenes.trascenderbot.com/lasemilla.jpg", alt: "Carta del Oráculo La Semilla" }),
-                            React.createElement('img', { className: "max-w-[120px] rounded-lg transition-all duration-300 [filter:drop-shadow(0_0_15px_rgba(255,195,113,0.4))] hover:-translate-y-2 hover:[filter:drop-shadow(0_0_20px_rgba(255,195,113,0.6))] relative -top-4", src: "https://imagenes.trascenderbot.com/elpuente.jpg", alt: "Carta del Oráculo El Puente" }),
-                            React.createElement('img', { className: "max-w-[120px] rounded-lg transition-all duration-300 [filter:drop-shadow(0_0_15px_rgba(255,195,113,0.4))] hover:-translate-y-2 hover:[filter:drop-shadow(0_0_20px_rgba(255,195,113,0.6))]", src: "https://imagenes.trascenderbot.com/lamontaña.jpg", alt: "Carta del Oráculo La Montaña" })
+                            React.createElement('img', { className: "max-w-[100px] sm:max-w-[120px] rounded-lg transition-all duration-300 [filter:drop-shadow(0_0_15px_rgba(255,195,113,0.4))] hover:-translate-y-2 hover:[filter:drop-shadow(0_0_20px_rgba(255,195,113,0.6))]", src: "https://imagenes.trascenderbot.com/lasemilla.jpg", alt: "Carta del Oráculo La Semilla" }),
+                            React.createElement('img', { className: "max-w-[100px] sm:max-w-[120px] rounded-lg transition-all duration-300 [filter:drop-shadow(0_0_15px_rgba(255,195,113,0.4))] hover:-translate-y-2 hover:[filter:drop-shadow(0_0_20px_rgba(255,195,113,0.6))] relative -top-4", src: "https://imagenes.trascenderbot.com/elpuente.jpg", alt: "Carta del Oráculo El Puente" }),
+                            React.createElement('img', { className: "max-w-[100px] sm:max-w-[120px] rounded-lg transition-all duration-300 [filter:drop-shadow(0_0_15px_rgba(255,195,113,0.4))] hover:-translate-y-2 hover:[filter:drop-shadow(0_0_20px_rgba(255,195,113,0.6))]", src: "https://imagenes.trascenderbot.com/lamontaña.jpg", alt: "Carta del Oráculo La Montaña" })
+                        )
+                    )
+                )
+            );
+        };
+
+        const GrowthEcosystem = () => {
+            const features = [
+                { icon: Library, title: "Biblioteca Esotérica", description: "Acceso a una base de conocimiento curada sobre alquimia, tarot, sueños y más, en constante expansión." },
+                { icon: Sun, title: "Guía Diaria", description: "Cada día recibirás contenido de alto valor, guías y reflexiones sobre diferentes temas para impulsar tu evolución." },
+                { icon: Users, title: "Círculo de Apoyo Privado", description: "Conecta con otros miembros de la comunidad en un espacio seguro para compartir, aprender y evolucionar juntos." },
+                { icon: Sprout, title: "Tu Evolución Espiritual", description: "Un espacio dedicado para que compartas tus avances, descubrimientos y la transformación que vives en tu camino." }
+            ];
+            return React.createElement('section', { id: "growth-ecosystem", className: "py-20 px-[5%] bg-transparent" },
+                React.createElement('div', { className: "text-center max-w-4xl mx-auto mb-12 animate-fade-in-up" },
+                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "Un Ecosistema para tu Transformación"),
+                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Al unirte, no solo accedes a un mentor. Entras a un universo de herramientas y apoyo diseñados para la evolución integral: Mente, Cuerpo y Espíritu.")
+                ),
+                React.createElement('div', { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto" },
+                    features.map((feature, index) => 
+                        React.createElement('div', { key: feature.title, className: "flex flex-col items-center text-center gap-4 bg-night-blue-bg/50 p-6 rounded-lg border border-golden-glow/20 transition-all duration-300 hover:bg-night-blue-bg/80 hover:border-golden-glow/40 hover:-translate-y-2", style: { animationDelay: `${index * 150}ms` } },
+                            React.createElement(feature.icon, { className: "w-10 h-10 text-golden-glow opacity-90", strokeWidth: 1.5 }),
+                            React.createElement('h3', { className: "text-xl font-bold text-off-white-text mt-2 font-philosopher" }, feature.title),
+                            React.createElement('p', { className: "text-off-white-text/70 text-sm" }, feature.description)
                         )
                     )
                 )
@@ -255,21 +294,21 @@
 
         const FoundersBenefits = () => {
             const benefits = [
-                { icon: Gift, title: "1 Mes de Acceso Gratuito", description: "Disfruta de acceso total al bot y la comunidad, sin ningún costo, como agradecimiento por tu confianza." },
-                { icon: HeartHandshake, title: "Impacto Directo en el Futuro", description: "Tu voz será crucial. Participarás en la evolución de las herramientas y el contenido que ofreceremos." },
-                { icon: MessageSquare, title: "Comunicación Cercana", description: "Tendrás un canal directo con el fundador para compartir ideas, feedback y resolver dudas de forma prioritaria." },
-                { icon: Award, title: "Reconocimiento de Fundador", description: "Serás reconocido como uno de los pioneros que hicieron posible este sueño, con un lugar especial en nuestra historia." }
+                { icon: Gift, title: "Acceso Fundador (De Por Vida)", description: "Disfruta de 1 mes de acceso premium total y GRATUITO. Después, mantendrás beneficios y un precio especial para siempre." },
+                { icon: HeartHandshake, title: "Consejero de Confianza", description: "Tu feedback y experiencia serán nuestra guía más valiosa para perfeccionar las herramientas y el contenido que darán vida a Trascendit." },
+                { icon: MessageSquare, title: "Línea Directa con el Creador", description: "Tendrás un canal prioritario para compartir ideas, feedback y resolver dudas. Tu opinión es nuestro activo más valioso." },
+                { icon: Award, title: "Reconocimiento Eterno", description: "Serás honrado como uno de los 20 pioneros fundadores, con un lugar de honor en la historia de nuestra comunidad." }
             ];
 
-            return React.createElement('section', { id: "benefits", className: "py-20 px-[5%] bg-deep-black-bg/30" },
-                React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12" },
-                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "¿Qué Significa ser Miembro Fundador?"),
-                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Es más que un título. Es una oportunidad única de co-crear y crecer desde la semilla.")
+            return React.createElement('section', { id: "benefits", className: "py-20 px-[5%] bg-black/20" },
+                React.createElement('div', { className: "text-center max-w-3xl mx-auto mb-12 animate-fade-in-up" },
+                    React.createElement('h2', { className: "font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4" }, "¿Por Qué Deberías Ser Fundador?"),
+                    React.createElement('p', { className: "text-lg text-off-white-text/80" }, "Esta no es una simple membresía. Es una invitación a ser parte de algo desde su concepción. Una oportunidad única que no se repetirá.")
                 ),
                 React.createElement('div', { className: "grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" },
-                    benefits.map(benefit => 
-                        React.createElement('div', { key: benefit.title, className: "flex items-start gap-4" },
-                            React.createElement(benefit.icon, { className: "w-8 h-8 text-golden-glow flex-shrink-0 mt-1", strokeWidth: 1.5 }),
+                    benefits.map((benefit, index) => 
+                        React.createElement('div', { key: benefit.title, className: "flex items-start gap-5 p-4 rounded-lg transition-colors duration-300 hover:bg-deep-black-bg/20", style: { animationDelay: `${index * 150}ms` } },
+                            React.createElement(benefit.icon, { className: "w-10 h-10 text-golden-glow flex-shrink-0 mt-1", strokeWidth: 1.5 }),
                             React.createElement('div', null,
                                 React.createElement('h3', { className: "text-xl font-bold text-off-white-text" }, benefit.title),
                                 React.createElement('p', { className: "text-off-white-text/70" }, benefit.description)
@@ -281,19 +320,21 @@
         };
 
         const Application = () => {
-            return React.createElement('section', { id: "application", className: "py-20 px-[5%] text-center bg-night-blue-bg/60" },
-                React.createElement('div', { className: "max-w-4xl mx-auto" },
-                    React.createElement('h2', { className: "text-4xl lg:text-5xl font-philosopher text-golden-glow mb-6 [text-shadow:0_0_10px_#ffc371]" }, "Aplica para Asegurar tu Plaza"),
+            return React.createElement('section', { id: "application", className: "py-20 px-[5%] text-center bg-transparent" },
+                React.createElement('div', { className: "max-w-4xl mx-auto animate-fade-in-up" },
+                    React.createElement('h2', { className: "text-4xl lg:text-5xl font-philosopher text-golden-glow mb-6 [text-shadow:0_0_15px_#ffc371]" }, "Tu Momento es Ahora. El Círculo te Espera."),
                     React.createElement('p', { className: "text-lg sm:text-xl text-off-white-text/80 max-w-3xl mx-auto mb-8" }, 
-                        "Este no es un simple formulario. Es nuestra forma de asegurar que reunimos a un grupo de personas verdaderamente alineadas y comprometidas. Las plazas son limitadas a 20 fundadores para garantizar una experiencia íntima y poderosa. Por favor, responde con el corazón."
+                        "Solo 20 personas serán seleccionadas. Buscamos almas comprometidas, listas para crecer y co-crear. Si sientes el llamado, no lo ignores. Este formulario es el primer paso en tu nuevo viaje."
                     ),
-                    React.createElement('a', { 
-                        href: "https://tally.so/r/mZr15z", // <-- ¡IMPORTANTE! REEMPLAZA ESTO CON EL ENLACE A TU FORMULARIO
-                        target: "_blank", 
-                        rel: "noopener noreferrer", 
-                        className: "mt-4 inline-block bg-golden-glow text-deep-black-bg font-bold px-12 py-4 rounded-full text-xl no-underline transition-all duration-300 shadow-lg shadow-golden-glow/20 hover:scale-105 hover:bg-golden-glow/90 animate-pulse-glow" 
-                    },
-                        "Comenzar mi Aplicación"
+                    React.createElement('div', { className: "text-center" },
+                        React.createElement('a', { 
+                            href: "https://tally.so/r/mZr15z",
+                            target: "_blank", 
+                            rel: "noopener noreferrer", 
+                            className: "mt-4 inline-block bg-golden-glow text-deep-black-bg font-bold px-16 py-5 rounded-full text-2xl no-underline transition-all duration-300 shadow-lg shadow-golden-glow/30 hover:scale-105 hover:bg-white animate-pulse-glow" 
+                        },
+                            "Aplica para ser Fundador"
+                        )
                     )
                 )
             );
@@ -310,14 +351,14 @@
             );
             return React.createElement('footer', { className: "w-full bg-deep-black-bg text-center py-8 px-[5%]" },
                 React.createElement('div', { className: "flex flex-col items-center gap-6" },
-                    React.createElement('a', { href: "#hero", "aria-label": "Ir al inicio" },
+                    React.createElement('a', { href: "#hero", 'aria-label': "Ir al inicio" },
                         React.createElement('img', { src: "https://imagenes.trascenderbot.com/trascendit.png", alt: "Logo de Trascendit", className: "max-w-[70px] w-auto rounded-full opacity-80 transition-opacity duration-300 hover:opacity-100" })
                     ),
                     React.createElement('div', { className: "flex items-center gap-6" },
-                        React.createElement('a', { href: "https://www.instagram.com/trascenditcomunidad", target: "_blank", rel: "noopener noreferrer", "aria-label": "Instagram de Trascendit", className: "text-off-white-text/70 transition-colors duration-300 hover:text-golden-glow" },
+                        React.createElement('a', { href: "https://www.instagram.com/trascenditcomunidad", target: "_blank", rel: "noopener noreferrer", 'aria-label': "Instagram de Trascendit", className: "text-off-white-text/70 transition-colors duration-300 hover:text-golden-glow" },
                             React.createElement(InstagramIcon)
                         ),
-                        React.createElement('a', { href: "https://www.tiktok.com/@trascenditcomunidad", target: "_blank", rel: "noopener noreferrer", "aria-label": "TikTok de Trascendit", className: "text-off-white-text/70 transition-colors duration-300 hover:text-golden-glow" },
+                        React.createElement('a', { href: "https://www.tiktok.com/@trascenditcomunidad", target: "_blank", rel: "noopener noreferrer", 'aria-label': "TikTok de Trascendit", className: "text-off-white-text/70 transition-colors duration-300 hover:text-golden-glow" },
                             React.createElement(TikTokIcon)
                         )
                     ),
@@ -333,8 +374,9 @@
                     React.createElement(Header),
                     React.createElement('main', null,
                         React.createElement(Hero),
-                        React.createElement(IntroBot),
+                        React.createElement(AiMentor),
                         React.createElement(FoundersExperience),
+                        React.createElement(GrowthEcosystem),
                         React.createElement(FoundersBenefits),
                         React.createElement(Application)
                     ),
@@ -349,3 +391,4 @@
     </script>
 </body>
 </html>
+
