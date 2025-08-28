@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } => 'react';
+import { useEffect, useState, useRef } from 'react';
 import './ShootingStar.css';
 
 const ShootingStar = () => {
