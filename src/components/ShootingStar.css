@@ -14,7 +14,7 @@
   background: linear-gradient(-45deg, #fff, rgba(255, 255, 255, 0));
   border-radius: 999px;
   filter: drop-shadow(0 0 6px #fff);
-  animation: shooting-animation linear infinite;
+  animation: shooting-animation linear;
 }
 
 .shooting-star::before,

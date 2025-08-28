@@ -13,16 +13,16 @@ const ShootingStar = () => {
           className="shooting-star"
           style={{
             top: `${Math.random() * 100}vh`,
-            left: `-400px`, // Start off-screen
+            left: `${Math.random() * 60 - 10}vw`, // Starts between -10vw and 50vw
             animationDuration: `${Math.random() * 3 + 2}s`,
             animationDelay: `${Math.random() * 5}s`,
           }}
         />
       );
-      setStars(prevStars => [...prevStars.slice(-19), newStar]); // Keep max 20 stars
+      setStars(prevStars => [...prevStars.slice(-6), newStar]); // Keep max 7 stars
     };
 
-    intervalRef.current = setInterval(createStar, 500); // Create a new star every 0.5 seconds
+    intervalRef.current = setInterval(createStar, 2500); // Create a new star every 2.5 seconds
 
     return () => {
       if (intervalRef.current) {
