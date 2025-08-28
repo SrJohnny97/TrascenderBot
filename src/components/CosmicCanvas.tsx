@@ -38,6 +38,10 @@ const CosmicCanvas = () => {
             enable: true,
             mode: "bubble",
           },
+          onScroll: {
+            enable: true,
+            mode: "parallax",
+          },
         },
         modes: {
           bubble: {
@@ -45,6 +49,11 @@ const CosmicCanvas = () => {
             size: 2.5,
             duration: 2,
             opacity: 1,
+          },
+          parallax: {
+            enable: true,
+            force: 5, // Increased force for a more noticeable effect
+            smooth: 10,
           },
         },
       },
@@ -60,7 +69,7 @@ const CosmicCanvas = () => {
           enable: true,
           outModes: "out",
           random: true,
-          speed: 0.3,
+          speed: 0.4, // Slightly increased speed
           straight: false,
         },
         number: {
@@ -68,13 +77,13 @@ const CosmicCanvas = () => {
             enable: true,
             area: 800,
           },
-          value: 300,
+          value: 400, // Increased particle count
         },
         opacity: {
-          value: { min: 0.1, max: 0.6 },
+          value: { min: 0.1, max: 0.8 }, // Increased max opacity
           animation: {
             enable: true,
-            speed: 0.8,
+            speed: 2, // Increased speed for a stronger pulse
             sync: false,
           },
         },
@@ -82,12 +91,12 @@ const CosmicCanvas = () => {
           type: "circle",
         },
         size: {
-          value: { min: 0.5, max: 1.5 },
+          value: { min: 0.5, max: 2 }, // Increased max size
         },
         twinkle: {
           particles: {
             enable: true,
-            frequency: 0.05,
+            frequency: 0.01, // Increased frequency for more twinkling
             opacity: 1,
           },
         },
@@ -99,7 +108,7 @@ const CosmicCanvas = () => {
           options: {
             particles: {
               number: {
-                value: 200,
+                value: 200, // Reduced for mobile
               },
             },
             interactivity: {
