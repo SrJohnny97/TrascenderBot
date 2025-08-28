@@ -1,9 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } => 'react';
 import './ShootingStar.css';
 
 const ShootingStar = () => {
-  const [stars, setStars] = useState<JSX.Element[]>([]);
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const [stars, setStars] = useState<React.ReactNode[]>([]);
+  const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
     const createStar = () => {
