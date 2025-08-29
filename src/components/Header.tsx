@@ -4,7 +4,7 @@ const Header = () => {
             <a href="#hero" aria-label="Ir al inicio">
                 <img src="https://imagenes.trascenderbot.com/trascendit.png" alt="Logo de Trascendit" className="h-[65px] w-auto rounded-full" />
             </a>
-            <a href="#application" className="bg-golden-glow text-deep-black-bg font-bold px-6 py-2 rounded-full text-base no-underline transition-all duration-300 shadow-lg shadow-golden-glow/20 hover:scale-105 hover:bg-white">
+            <a href="#application" className="bg-golden-glow text-deep-black-bg font-bold px-6 py-2 rounded-full text-base no-underline transition-all duration-300 shadow-lg shadow-golden-glow/20 hover:scale-105 hover:bg-white [text-shadow:0px_1px_1px_rgba(0,0,0,0.2)]">
                 Aplica Ahora
             </a>
         </header>
