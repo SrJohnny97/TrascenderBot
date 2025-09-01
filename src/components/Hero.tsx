@@ -17,12 +17,19 @@ const Hero = () => {
                     Has despertado. Sientes la llamada a evolucionar, pero el camino parece solitario y confuso. No estás solo. <span className="font-bold text-golden-glow [text-shadow:0_0_10px_#ffc371,0_0_8px_rgba(0,0,0,0.7)]">Trascendit</span> nace para ser tu brújula.
                 </p>
                 <h2 className="font-philosopher text-white text-3xl sm:text-4xl md:text-5xl leading-tight font-bold mb-8 [text-shadow:0_0_8px_rgba(0,0,0,0.5)]">
-                    Buscamos a los Pioneros para Forjar el Futuro.
+                    Tu viaje hacia tu mejor versión comienza aquí.
                 </h2>
                 <a href="#application" className="inline-block bg-golden-glow text-deep-black-bg font-bold px-12 py-4 rounded-full text-xl no-underline animate-pulse-glow [text-shadow:0px_1px_1px_rgba(0,0,0,0.2)]">
-                    Quiero Ser Fundador
+                    Descubrir mi Camino
                 </a>
-                <p className="mt-6 text-off-white-text/60">Unirte como Fundador es gratuito y sin compromiso.</p>
+                
+                <div className="mt-8">
+                    <div className="inline-block border border-golden-glow/50 text-golden-glow/80 text-sm px-6 py-2 rounded-full shadow-lg shadow-golden-glow/10">
+                        EDICIÓN PIONEROS: Las puertas del círculo cierran en Septiembre.
+                    </div>
+                </div>
+
+                <p className="mt-4 text-off-white-text/60">El primer paso es gratuito y sin compromiso.</p>
             </div>
         </section>
     );

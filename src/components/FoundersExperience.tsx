@@ -15,10 +15,10 @@ const FoundersExperience = () => {
         <section id="experience" className="py-20 px-[5%] bg-black/20">
             <div className="relative text-center max-w-3xl mx-auto mb-12 animate-fade-in-up">
                 <h2 className="font-philosopher text-golden-glow text-4xl lg:text-5xl mb-4 relative inline-block px-4">
-                    <span className="relative z-10">Tu Experiencia como Fundador</span>
+                    <span className="relative z-10">Tu Ecosistema de Crecimiento</span>
                     <div className="absolute -inset-x-4 -inset-y-2 bg-[radial-gradient(ellipse_at_center,rgba(255,195,113,0.2)_40%,rgba(255,195,113,0)_80%)] blur-xl -z-0"></div>
                 </h2>
-                <p className="text-lg text-off-white-text/80 mt-6">Estas son las herramientas y espacios que podrás probar y ayudarnos a perfeccionar.</p>
+                <p className="text-lg text-off-white-text/80 mt-6">Las herramientas y espacios diseñados para acompañarte en tu evolución diaria.</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
                 <ul className="list-none p-0 flex flex-col gap-4">

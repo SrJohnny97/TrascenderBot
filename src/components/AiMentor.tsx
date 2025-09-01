@@ -22,7 +22,7 @@ const AiMentor = () => {
                     <span className="relative z-10">Una Guía Para la Exploración Interior</span>
                     <div className="absolute -inset-x-4 -inset-y-2 bg-[radial-gradient(ellipse_at_center,rgba(255,195,113,0.2)_40%,rgba(255,195,113,0)_80%)] blur-xl -z-0"></div>
                 </h2>
-                <p className="text-lg text-off-white-text/80 mt-6">Como fundador, tendrás acceso prioritario a un mentor IA que domina una amplia gama de disciplinas esotéricas y de autoconocimiento para acompañarte en tu viaje.</p>
+                <p className="text-lg text-off-white-text/80 mt-6">Al unirte ahora, tendrás acceso prioritario a un mentor IA que domina una amplia gama de disciplinas esotéricas y de autoconocimiento para acompañarte en tu viaje.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 {topics.map((topic, index) => <TopicCard key={topic.name} {...topic} style={{ animationDelay: `${index * 100}ms` }} />)}
