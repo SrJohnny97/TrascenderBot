@@ -17,12 +17,12 @@ const Hero = () => {
                     Has despertado. Sientes la llamada a evolucionar, pero el camino parece solitario y confuso. No estás solo. <span className="font-bold text-golden-glow [text-shadow:0_0_10px_#ffc371,0_0_8px_rgba(0,0,0,0.7)]">Trascendit</span> nace para ser tu brújula.
                 </p>
                 <h2 className="font-philosopher text-white text-3xl sm:text-4xl md:text-5xl leading-tight font-bold mb-8 [text-shadow:0_0_8px_rgba(0,0,0,0.5)]">
-                    Buscamos a 20 Pioneros para Forjar el Futuro.
+                    Buscamos a los Pioneros para Forjar el Futuro.
                 </h2>
                 <a href="#application" className="inline-block bg-golden-glow text-deep-black-bg font-bold px-12 py-4 rounded-full text-xl no-underline animate-pulse-glow [text-shadow:0px_1px_1px_rgba(0,0,0,0.2)]">
                     Quiero Ser Fundador
                 </a>
-                <p className="mt-6 text-off-white-text/60">Las aplicaciones son gratuitas y sin compromiso.</p>
+                <p className="mt-6 text-off-white-text/60">Unirte como Fundador es gratuito y sin compromiso.</p>
             </div>
         </section>
     );

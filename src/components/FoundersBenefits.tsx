@@ -5,7 +5,7 @@ const FoundersBenefits = () => {
         { icon: Gift, title: "Acceso Fundador (De Por Vida)", description: "Disfruta de 1 mes de acceso premium total y GRATUITO. Después, mantendrás beneficios y un precio especial para siempre." },
         { icon: HeartHandshake, title: "Consejero de Confianza", description: "Tu feedback y experiencia serán nuestra guía más valiosa para perfeccionar las herramientas y el contenido que darán vida a Trascendit." },
         { icon: MessageSquare, title: "Línea Directa con el Creador", description: "Tendrás un canal prioritario para compartir ideas, feedback y resolver dudas. Tu opinión es nuestro activo más valioso." },
-        { icon: Award, title: "Reconocimiento Eterno", description: "Serás honrado como uno de los 20 pioneros fundadores, con un lugar de honor en la historia de nuestra comunidad." }
+        { icon: Award, title: "Reconocimiento Eterno", description: "Serás honrado como uno de los pioneros fundadores, con un lugar de honor en la historia de nuestra comunidad." }
     ];
 
     return (

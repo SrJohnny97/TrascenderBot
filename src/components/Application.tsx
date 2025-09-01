@@ -7,16 +7,16 @@ const Application = () => {
                     <div className="absolute -inset-x-4 -inset-y-2 bg-[radial-gradient(ellipse_at_center,rgba(255,195,113,0.2)_40%,rgba(255,195,113,0)_80%)] blur-xl -z-0"></div>
                 </h2>
                 <p className="text-lg sm:text-xl text-off-white-text/80 max-w-3xl mx-auto mb-8 mt-6">
-                    Solo 20 personas serán seleccionadas. Buscamos almas comprometidas, listas para crecer y co-crear. Si sientes el llamado, no lo ignores. Este formulario es el primer paso en tu nuevo viaje.
+                    Has sentido la llamada a ser más, a vivir con un propósito más profundo. Aquí encontrarás las herramientas y la guía para convertir esa aspiración en tu realidad diaria. Es el momento de comprometerte contigo y construir activamente tu mejor versión. El siguiente paso es tuyo.
                 </p>
                 <div className="text-center">
                     <a 
-                        href="https://tally.so/r/mZr15z"
+                        href="https://t.me/TrascenditBot"
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="mt-4 inline-block bg-golden-glow text-deep-black-bg font-bold px-16 py-5 rounded-full text-2xl no-underline transition-all duration-300 shadow-lg shadow-golden-glow/30 hover:scale-105 hover:bg-white animate-pulse-glow"
                     >
-                        Aplica para ser Fundador
+                        Comenzar mi Transformación
                     </a>
                 </div>
             </div>
